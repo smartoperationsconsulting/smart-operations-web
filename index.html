@@ -137,6 +137,15 @@ nav.open .nav-toggle span:nth-child(3){transform:translateY(-7px) rotate(-45deg)
   .nav-links a{font-size:17px;padding:14px 4px;border-bottom:1px solid rgba(168,182,196,.14);white-space:normal}
   .nav-links a.nav-cta{margin-top:14px;text-align:center;padding:13px 16px;border-bottom:0;border-radius:6px}
   .nav-in{position:relative}
+  .nav-in{padding:8px 16px;gap:8px}
+  .nav-in > a{min-width:0;flex:1 1 auto;overflow:hidden}
+  .nav-in > a span{font-size:14px !important;white-space:nowrap !important;overflow:hidden;text-overflow:ellipsis;display:block}
+  .nav-in > a img{height:36px !important;flex-shrink:0}
+  .nav-toggle{flex-shrink:0}
+}
+@media(max-width:380px){
+  .nav-in > a span{font-size:12.5px !important}
+  .nav-in > a img{height:32px !important}
 }
 </style>
 </head>
