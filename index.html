@@ -88,7 +88,7 @@
   nav.open .nav-toggle span:nth-child(1){transform:translateY(7px) rotate(45deg)}
   nav.open .nav-toggle span:nth-child(2){opacity:0}
   nav.open .nav-toggle span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
-  @media(max-width:1320px){
+  @media(max-width:1023px){
     nav{background:rgba(20,32,46,.92);-webkit-backdrop-filter:saturate(160%) blur(16px);backdrop-filter:saturate(160%) blur(16px)}
     .nav-toggle{display:flex}
     .nav-in{position:relative;padding-top:8px;padding-bottom:8px;min-height:60px}
@@ -340,6 +340,13 @@
     .scale-plan{transition:none}
     .js .madurez:not(.in) .scale-plan{transform:none}
     details p{animation:none}
+  }
+
+  /* Laptops: el menú completo cabe si el nombre junto al logo se oculta */
+  @media(min-width:1024px) and (max-width:1279px){.brand span{display:none}}
+  @media(min-width:1024px) and (max-width:1339px){
+    .nav-links a{padding:8px 9px;font-size:13.5px}
+    .nav-links a.nav-cta{padding:8px 16px;margin-left:4px}
   }
   /* ---------- Apartados (una vista por opción del menú) ---------- */
   .views [data-view]:not(.view-on){display:none}
@@ -691,7 +698,7 @@
     a.addEventListener('click',function(){setOpen(false);});
   });
   document.addEventListener('keydown',function(e){if(e.key==='Escape')setOpen(false);});
-  window.addEventListener('resize',function(){if(window.innerWidth>1320){setOpen(false);}});
+  window.addEventListener('resize',function(){if(window.innerWidth>1023){setOpen(false);}});
 
   /* Barra con fondo al bajar (fuera de Inicio siempre con fondo, porque hay secciones claras arriba) */
   function onScroll(){nav.classList.toggle('scrolled',window.scrollY>24||(current&&current!=='inicio'));}
